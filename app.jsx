@@ -5,7 +5,7 @@ export default function app() {
   return (
     <div>
       asasdasd
-      ádasdsdasd
+      <h1>aaaaaa</h1>
     </div>
   )
 }
