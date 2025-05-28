@@ -1,0 +1,211 @@
+.app-container {
+  padding: 2rem 0;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+  background-color: var(--light-color);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.app-title {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.app-description {
+  max-width: 800px;
+  margin: 0 auto;
+  color: var(--dark-color);
+}
+
+/* Card styling */
+.orchid-card {
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+  background-color: white;
+  position: relative;
+}
+
+.orchid-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--hover-shadow);
+}
+
+.orchid-card-img-container {
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+  background-color: #f0f2f5;
+}
+
+.orchid-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.orchid-card:hover .orchid-card-img {
+  transform: scale(1.08);
+}
+
+.orchid-card-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--accent-color);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  z-index: 2;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  backdrop-filter: blur(4px);
+}
+
+.orchid-card-body {
+  padding: 1.5rem;
+}
+
+.orchid-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--primary-color);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.orchid-card-text {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.orchid-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  background-color: #f9f9f9;
+}
+
+.orchid-card-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.orchid-card-rating-stars {
+  color: #ffc107;
+}
+
+.orchid-card-likes {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: #e74c3c;
+  transition: transform 0.3s ease;
+}
+
+.orchid-card-likes:hover {
+  transform: scale(1.1);
+}
+
+.orchid-card-btn {
+  margin-top: 0.5rem;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.orchid-card-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.orchid-card-btn:hover::before {
+  left: 100%;
+}
+
+/* Filters section */
+.filters-section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.filters-title {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.filters-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Category pills */
+.category-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.category-pill {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: var(--transition);
+  border: 1px solid transparent;
+}
+
+.category-pill:hover {
+  background-color: rgba(78, 119, 88, 0.2);
+  border-color: var(--primary-color);
+}
+
+.category-pill.active {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 500;
+}
+
+/* Image placeholder animation */
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 0.9; }
+  100% { opacity: 0.6; }
+}
+
+.image-placeholder {
+  animation: pulse 1.5s infinite;
+}
