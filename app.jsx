@@ -5,7 +5,7 @@ export default function app() {
   return (
     <div>
       asasdasd
-      1111
+      <h2>asd</h2>
     </div>
   )
 }
